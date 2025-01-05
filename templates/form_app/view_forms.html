@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>List of Forms</h1>
+<ul>
+    {% for form in forms %}
+        <li>
+            <a href="{% url 'view_form' form.id %}">{{ form.title }}</a>
+            <a href="{% url 'add_question' form.id %}">Add Questions</a>
+            <a href="{% url 'submit_form' form.id %}">Submit Response</a>
+            <a href="{% url 'view_analytics' form.id %}">View Analytics</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

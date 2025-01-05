@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Submit Form - {{ form.title }}</h1>
+<!-- Form submission logic here -->
+<a href="{% url 'view_form' form.id %}">Back to Form</a>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Create New Form</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Create Form</button>
+</form>
+{% if form.instance.id %}
+    <a href="{% url 'add_question' form.instance.id %}">Add Questions</a>
+    <br>
+    <a href="{% url 'view_forms' %}">Back to Forms List</a>
+{% endif %}
+{% endblock %}

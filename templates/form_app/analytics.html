@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Analytics for {{ form.title }}</h1>
+<!-- Analytics display logic here -->
+<a href="{% url 'view_form' form.id %}">Back to Form</a>
+{% endblock %}
